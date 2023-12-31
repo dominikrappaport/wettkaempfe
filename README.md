@@ -6,7 +6,7 @@ Mit Hilfe von GGPlot2 erzeuge ich schöne Diagramme, die die Ergebnisse meiner R
 
 1. ein Streudiagramm, wo die Platzierung auf der X-Achse und die Wettkampfzeit auf der Y-Achse aufgetragen sind,
 2. ein Streudiagramm mit zufälliger Verschiebung der Punkte, wo die diskrete Altersklasse auf der X-Achse und die Wettkampfzeit auf der Y-Achse aufgetragen sind und
-3. ein Diagramm, das die Dichte der empirischen Verteilungsfunktion bezügich der Wettkampfzeiten aller Teilnehmer zeigt.
+3. ein Diagramm, das die Dichte der empirischen Verteilungsfunktion bezüglich der Wettkampfzeiten aller Teilnehmer zeigt.
 
 ## Eingabedaten
 
