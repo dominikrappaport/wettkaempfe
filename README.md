@@ -32,3 +32,9 @@ Um alle Wettkämpfe in einem Durchlauf zu erzeugen, tragen wir jedes Rennen als 
 |--------------------------------------------------|-------------------------------------------------------------------|------------------------------------------------|---------|-----------------------|----------------------|----------------------------------------------------|---------|-----------------------|----------------------|------------------------------------------------|---------|-----------------------|----------------------|
 | data/processed/ergebnis_wachauer_radtage2023.csv | https://events.racetime.pro/de/event/624/competition/3788/results | output/wachauer_radtage2023_punktediagramm.png | 1900    | Wachauer Radtage 2023 | Genuss Radtour 53 km | output/wachauer_radtage2023_kategoriendiagramm.png | 1200    | Wachauer Radtage 2023 | Genuss Radtour 53 km | output/wachauer_radtage2023_dichtediagramm.png | 1100    | Wachauer Radtage 2023 | Genuss Radtour 53 km |
 | data/processed/ergebnis_sturmkriterium2023.csv   | https://events.racetime.pro/de/event/804/competition/4960/results | output/sturmkriterium2023_punktediagramm.png   | 1900    | Sturmkriterium 2023   | Staubiger 80 km      | output/sturmkriterium2023_kategoriendiagramm.png   | 1200    | Sturmkriterium 2023   | Staubiger 80 km      | output/sturmkriterium2023_dichtediagramm.png   | 1100    | Sturmkriterium 2023   | Staubiger 80 km      |
+
+Im folgenden Bild wird veranschaulicht, wie sich die Steuerdaten auf das Bild auswirken:
+
+![Steuerdaten und ihre Wirkung auf das erstellte Diagramm](images/werte_im_diagramm.jpg)
+
+Die Parametergruppen 1 bis 3 korrespondieren zu den Diagrammtypen in der oben beschriebenen Reihenfolge.
