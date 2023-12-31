@@ -15,7 +15,7 @@ pacman::p_load(
 
 # Definiere Konstanten
 
-schrittweise.platz <- 50
+schrittweite.platz <- 50
 schrittweite.minuten <- 30
 
 # Definiere Hilfsfunktionen
@@ -69,7 +69,7 @@ format.minuten <- function(minute, letzte) {
 # Definiere diagrammerzeugende Funktionen
 
 erzeuge.punktediagramm <- function(ergebnis, ausgabedatei, titel, untertitel, breite, quelle) {
-  letzter <- runde.auf(max(ergebnis$Pos), schrittweise.platz)
+  letzter <- runde.auf(max(ergebnis$Pos), schrittweite.platz)
   zeit <- meine.zeit(ergebnis)
   pos <- meine.position(ergebnis)
 
@@ -80,8 +80,8 @@ erzeuge.punktediagramm <- function(ergebnis, ausgabedatei, titel, untertitel, br
     geom_hline(yintercept = 0, size = 1, colour="#333333") +
     scale_x_continuous(
       limits = c(1, letzter),
-      breaks = c(1, seq(50, letzter, schrittweise.platz)),
-      labels = format.platz(c(1, seq(50, letzter, schrittweise.platz)), letzter)) +
+      breaks = c(1, seq(50, letzter, schrittweite.platz)),
+      labels = format.platz(c(1, seq(50, letzter, schrittweite.platz)), letzter)) +
     scale_y_continuous(
       breaks = seq(0, 24*60, 60), 
       labels = label_dollar(prefix = NULL, suffix = " min")) +
@@ -96,7 +96,7 @@ erzeuge.punktediagramm <- function(ergebnis, ausgabedatei, titel, untertitel, br
 }
 
 erzeuge.kategoriendiagramm <- function(ergebnis, ausgabedatei, titel, untertitel, breite, quelle) {
-  letzter <- runde.auf(max(ergebnis$Pos), schrittweise.platz)
+  letzter <- runde.auf(max(ergebnis$Pos), schrittweite.platz)
   zeit <- meine.zeit(ergebnis)
   kat <- meine.kategorie(ergebnis)
   
