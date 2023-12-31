@@ -10,7 +10,7 @@ Mit Hilfe von GGPlot2 erzeuge ich schöne Diagramme, die die Ergebnisse meiner R
 
 ## Eingabedaten
 
-Zunächste übernehmen wir die Daten von der Website. Derzeit wird das Format von racetime.pro unterstützt.
+Zunächst übernehmen wir die Daten von der Website. Derzeit wird das Format von racetime.pro unterstützt.
 
 ![Ergebnisse der Wachauer Radtage 2023 auf racetime.pro](images/download_from_website.jpg)
 
