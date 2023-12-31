@@ -41,7 +41,7 @@ meine.position <- function(ergebnis) {
 }
 
 verarbeite.ergebnisdatei <- function(eingabedatei) {
-  ergebnis <- read_csv2(eingabedatei)
+  ergebnis <- read_csv(eingabedatei)
   
   ergebnis <- ergebnis %>% 
     mutate(Zeit.Minuten = period_to_seconds(hms(Zeit)) / 60) %>%
@@ -169,7 +169,7 @@ verarbeite.wettkampf <- function(ergebnisdatei,
 }
 
 verarbeite.wettkämpfe <- function(parameterdatei) {
-  wettkämpfe <- read_csv2(parameterdatei)
+  wettkämpfe <- read_csv(parameterdatei)
   
   for(i in 1:nrow(wettkämpfe)) {
     wettkampf <- wettkämpfe[i,]
