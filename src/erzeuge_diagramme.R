@@ -24,7 +24,6 @@ runde <- function(wert, vielfaches, rundungsfunktion) {
   rundungsfunktion(wert / vielfaches) * vielfaches
 }
 
-
 runde.auf <- function(wert, vielfaches) {
   runde(wert, vielfaches, ceiling)
 }
@@ -60,14 +59,14 @@ verarbeite.ergebnisdatei <- function(eingabedatei) {
 format.platz <- function(platz, letzter) {
   ifelse(
     platz == letzter, 
-    paste(format(platz, trim = TRUE), ". Platz", sep=""), 
-    paste(format(platz, trim = TRUE), ".", sep=""))
+    paste0(format(platz, trim = TRUE), ". Platz"), 
+    paste0(format(platz, trim = TRUE), "."))
 }
 
 format.minuten <- function(minute, letzte) {
   ifelse(
     minute == letzte, 
-    paste(format(minute, trim = TRUE), " Minuten", sep=""), 
+    paste0(format(minute, trim = TRUE), " Minuten"), 
     format(minute, trim = TRUE))
 }
 
