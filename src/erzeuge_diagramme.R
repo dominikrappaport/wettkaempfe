@@ -20,12 +20,17 @@ schrittweite.minuten <- 30
 
 # Definiere Hilfsfunktionen
 
+runde <- function(wert, vielfaches, rundungsfunktion) {
+  rundungsfunktion(wert / vielfaches) * vielfaches
+}
+
+
 runde.auf <- function(wert, vielfaches) {
-  ceiling(wert / vielfaches) * vielfaches
+  runde(wert, vielfaches, ceiling)
 }
 
 runde.ab <- function(wert, vielfaches) {
-  floor(wert / vielfaches) * vielfaches
+  runde(wert, vielfaches, floor)
 }
 
 meine.zeit <- function(ergebnis) {
