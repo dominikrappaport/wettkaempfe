@@ -45,15 +45,11 @@ meine.position <- function(ergebnis) {
 }
 
 verarbeite.ergebnisdatei <- function(eingabedatei) {
-  ergebnis <- read_csv(eingabedatei)
-  
-  ergebnis <- ergebnis %>% 
+  read_csv(eingabedatei) %>% 
     mutate(Zeit.Minuten = period_to_seconds(hms(Zeit)) / 60) %>%
     mutate(`⚤` = as.factor(`⚤`)) %>%
     mutate(Kat = as.factor(Kat)) %>%
     filter(!is.na(Zeit.Minuten))
-  
-  ergebnis
 }
 
 format.platz <- function(platz, letzter) {
