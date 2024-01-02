@@ -52,18 +52,19 @@ verarbeite.ergebnisdatei <- function(eingabedatei) {
     filter(!is.na(Zeit.Minuten))
 }
 
-format.platz <- function(platz, letzter) {
+format.letzter.eintrag <- function(wert, letzter.wert, suffix, letztes.suffix) {
   ifelse(
-    platz == letzter, 
-    paste0(format(platz, trim = TRUE), ". Platz"), 
-    paste0(format(platz, trim = TRUE), "."))
+    wert == letzter.wert, 
+    paste0(format(wert, trim = TRUE), letztes.suffix), 
+    paste0(format(wert, trim = TRUE), suffix))
+}
+
+format.platz <- function(platz, letzter) {
+  format.letzter.eintrag(platz, letzter, ".", ". Platz")
 }
 
 format.minuten <- function(minute, letzte) {
-  ifelse(
-    minute == letzte, 
-    paste0(format(minute, trim = TRUE), " Minuten"), 
-    format(minute, trim = TRUE))
+  format.letzter.eintrag(minute, letzte, "", " Minuten")
 }
 
 # Definiere diagrammerzeugende Funktionen
