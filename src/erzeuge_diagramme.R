@@ -53,10 +53,14 @@ verarbeite.ergebnisdatei <- function(eingabedatei) {
 }
 
 format.letzter.eintrag <- function(wert, letzter.wert, suffix, letztes.suffix) {
-  ifelse(
-    wert == letzter.wert, 
-    paste0(format(wert, trim = TRUE), letztes.suffix), 
-    paste0(format(wert, trim = TRUE), suffix))
+  paste0(
+    format(wert, trim = TRUE), 
+    ifelse(
+      wert == letzter.wert, 
+      letztes.suffix, 
+      suffix
+    )
+  )
 }
 
 format.platz <- function(platz, letzter) {
