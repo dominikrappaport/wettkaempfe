@@ -49,7 +49,7 @@ verarbeite.ergebnisdatei <- function(eingabedatei) {
     mutate(Zeit.Minuten = period_to_seconds(hms(Zeit)) / 60) %>%
     mutate(`⚤` = as.factor(`⚤`)) %>%
     mutate(Kat = as.factor(Kat)) %>%
-    filter(!is.na(Zeit.Minuten))
+    drop_na(Zeit.Minuten)
 }
 
 format.letzter.eintrag <- function(wert, letzter.wert, suffix, letztes.suffix) {
